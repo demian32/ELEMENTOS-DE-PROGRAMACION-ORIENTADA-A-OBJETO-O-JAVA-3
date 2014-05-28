@@ -13,7 +13,9 @@
     </head>
     <body>
         Ya quiero tacos........
-        <form action="chapo.guzman">
+        <form action="chapo.guzman" method="Post">
+            <p>Nombre:</p>
+            <input type="text" name="nombre" />
             <input type="submit" value="Crear cuenta">
             
         </form>

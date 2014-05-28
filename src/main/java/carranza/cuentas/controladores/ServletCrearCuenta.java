@@ -8,6 +8,7 @@ package carranza.cuentas.controladores;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,14 +19,10 @@ import javax.servlet.http.HttpServletResponse;
  * @author T107
  */
 public class ServletCrearCuenta extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-//Aqui ya se creo una cuenta
-out.println("<center>");
-out.println("cuenta creada con sexito");
-out.println("<center>");
-        
+            RequestDispatcher despachador=request.getRequestDispatcher("/Chica_Proporcionada.jsp");
+            despachador.forward(request,response);
+       
 }
 }
