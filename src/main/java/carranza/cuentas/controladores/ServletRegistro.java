@@ -6,6 +6,8 @@
 
 package carranza.cuentas.controladores;
 
+import com.registro.model.Gato;
+import com.registro.model.Mascota;
 import com.registro.model.Perro;
 import com.registro.model.Persona;
 import java.io.IOException;
@@ -33,11 +35,10 @@ public class ServletRegistro extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        Perro perro=new Perro();
-        perro.setNombre("kukis");
+        Mascota mascota=new Gato();
+        mascota.ObtenerRegistro();
         Persona p=new Persona();
-        p.setPerro(perro);
+        p.setMascota(mascota);
         request.setAttribute("registro", p);
         RequestDispatcher despachador= request.getRequestDispatcher("/registro.jsp");
         despachador.forward(request, response);

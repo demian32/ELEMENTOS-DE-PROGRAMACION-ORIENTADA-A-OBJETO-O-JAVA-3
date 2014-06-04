@@ -10,7 +10,6 @@ package com.registro.model;
  *
  * @author T107
  */
-public abstract class Probarregistro {
-    public static void main(String[] args) {
-    }
+public interface Mascota {
+    public String ObtenerRegistro();  
 }

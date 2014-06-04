@@ -10,7 +10,7 @@ package com.registro.model;
  *
  * @author T107
  */
-public class Perro implements Mascota {
+public class Gato implements Mascota {
     private String nombre;
 
     public String getNombre() {
@@ -22,7 +22,7 @@ public class Perro implements Mascota {
     }
     @Override
     public String ObtenerRegistro(){
-        return "Ele Perrito que registrarte es: ";
+        return "Ele Gatito que registrarte es: ";
     }
     
 }
